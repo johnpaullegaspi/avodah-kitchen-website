@@ -1,0 +1,70 @@
+# ===========================================================
+# Decap CMS configuration — Avodah Kitchen
+# ===========================================================
+# This file controls what staff can edit from the /admin page,
+# and how those edits get saved back to GitHub (which then
+# triggers Netlify to rebuild the live site automatically).
+#
+# THREE PLACEHOLDERS BELOW MUST BE FILLED IN BEFORE THIS WORKS
+# — see the deployment guide for exactly where these values
+# come from (they're provided by DecapBridge when you set up
+# your site there):
+#   1. repo:         your-github-username/your-repo-name
+#   2. identity_url:  https://auth.decapbridge.com/sites/YOUR_SITE_ID
+#   3. site_url:      https://your-site-name.netlify.app
+# ===========================================================
+
+backend:
+  name: git-gateway
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME
+  branch: main
+  identity_url: https://auth.decapbridge.com/sites/YOUR_SITE_ID
+  gateway_url: https://gateway.decapbridge.com
+
+  commit_messages:
+    create: 'Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    update: 'Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    delete: 'Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    uploadMedia: 'Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+    deleteMedia: 'Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge'
+
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+site_url: https://YOUR_SITE_NAME.netlify.app
+
+media_folder: "img/uploads"
+public_folder: "img/uploads"
+
+collections:
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "content/settings.json"
+        label: "General Settings"
+        name: "general"
+        fields:
+          - { label: "Logo Image", name: "logo", widget: "image", hint: "Upload a square image, ideally at least 200x200px." }
+          - { label: "Restaurant Name (shown in the hero banner)", name: "siteName", widget: "string" }
+          - { label: "Hero Tagline", name: "heroTagline", widget: "string" }
+          - { label: "Tally Reservation Form URL", name: "tallyFormUrl", widget: "string", hint: "The full link to your published Tally form, e.g. https://tally.so/r/xxxxxx. Used by every 'Reserve' button across the site." }
+          - { label: "Phone Number (Display Format)", name: "phoneDisplay", widget: "string", hint: "How it's shown on the page, e.g. +63 (2) 8123 4567" }
+          - { label: "Phone Number (Link Format)", name: "phoneLink", widget: "string", hint: "For the click-to-call link. Include the plus sign and country code with no spaces, e.g. +6328123456" }
+          - { label: "Email Address", name: "email", widget: "string" }
+          - { label: "Restaurant Address", name: "address", widget: "text" }
+
+  - name: "menu"
+    label: "Menu Items"
+    files:
+      - file: "content/menu.json"
+        label: "Full Menu"
+        name: "fullmenu"
+        fields:
+          - label: "Dishes"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.category}} — {{fields.name}} ({{fields.price}})"
+            fields:
+              - { label: "Category", name: "category", widget: "string", hint: "e.g. Starters, Mains, Desserts. Dishes with the same category are automatically grouped together on the menu page." }
+              - { label: "Dish Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "string", required: false }
+              - { label: "Price", name: "price", widget: "string", hint: "Include the currency symbol, e.g. $22 or ₱1,200" }

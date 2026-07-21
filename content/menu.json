@@ -1,0 +1,33 @@
+{
+  "items": [
+    { "category": "Starters", "name": "Charred Octopus", "description": "Smoked paprika, fingerling potato, chimichurri", "price": "$22" },
+    { "category": "Starters", "name": "Tuna Tartare", "description": "Avocado, sesame-soy, crisp wonton", "price": "$19" },
+    { "category": "Starters", "name": "Burrata & Heirloom Tomato", "description": "Basil oil, aged balsamic, sourdough crostini", "price": "$18" },
+    { "category": "Starters", "name": "French Onion Soup", "description": "Gruyère crust, brioche", "price": "$14" },
+
+    { "category": "From the Grill", "name": "Sizzlers Signature Ribeye 16oz", "description": "Charred, dry-aged, garlic butter", "price": "$58" },
+    { "category": "From the Grill", "name": "Dry-Aged New York Strip 14oz", "description": "28-day aged, black pepper crust", "price": "$52" },
+    { "category": "From the Grill", "name": "Filet Mignon 8oz", "description": "Red wine jus, roasted bone marrow", "price": "$54" },
+    { "category": "From the Grill", "name": "Tomahawk for Two 32oz", "description": "Herb butter, chimichurri, table-side sear", "price": "$128" },
+    { "category": "From the Grill", "name": "Smoked Gouda Wagyu Burger", "description": "Brioche, caramelized onion", "price": "$32" },
+
+    { "category": "Handmade Pasta & Seafood", "name": "Black Truffle Fettuccine", "description": "House-made pasta, wild mushrooms", "price": "$24" },
+    { "category": "Handmade Pasta & Seafood", "name": "Cast-Iron Seared Salmon", "description": "Lemon beurre blanc", "price": "$34" },
+    { "category": "Handmade Pasta & Seafood", "name": "Lobster Mac & Cheese", "description": "Five-cheese blend", "price": "$28" },
+    { "category": "Handmade Pasta & Seafood", "name": "Pan-Seared Scallops", "description": "Cauliflower purée, brown butter, crispy pancetta", "price": "$36" },
+
+    { "category": "Sides", "name": "Truffle Parmesan Fries", "description": "", "price": "$12" },
+    { "category": "Sides", "name": "Charred Broccolini", "description": "Chili, garlic, lemon", "price": "$11" },
+    { "category": "Sides", "name": "Loaded Mashed Potatoes", "description": "Bacon, chive, cheddar", "price": "$11" },
+    { "category": "Sides", "name": "Creamed Spinach", "description": "", "price": "$10" },
+
+    { "category": "Desserts", "name": "Smoked Chocolate Lava Cake", "description": "Vanilla bean ice cream", "price": "$14" },
+    { "category": "Desserts", "name": "Bourbon Bread Pudding", "description": "Salted caramel, whipped cream", "price": "$13" },
+    { "category": "Desserts", "name": "New York Cheesecake", "description": "Berry compote", "price": "$12" },
+
+    { "category": "Craft Cocktails", "name": "Sizzlers Old Fashioned", "description": "Smoked, barrel-aged", "price": "$16" },
+    { "category": "Craft Cocktails", "name": "Charred Rosemary Negroni", "description": "", "price": "$15" },
+    { "category": "Craft Cocktails", "name": "Smoked Manhattan", "description": "", "price": "$16" },
+    { "category": "Craft Cocktails", "name": "Sizzlers Espresso Martini", "description": "", "price": "$15" }
+  ]
+}
