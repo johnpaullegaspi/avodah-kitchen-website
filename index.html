@@ -42,9 +42,8 @@
     "addressCountry": "PH"
   },
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "17:00", "closes": "22:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "17:00", "closes": "23:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "21:00" }
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "12:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "10:00", "closes": "22:00" }
   ],
   "menu": "https://www.sizzlers.ph/menu.html",
   "acceptsReservations": "True",
@@ -79,7 +78,7 @@
     <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1741994246814-9caec2a78e07?q=80&w=2000&auto=format&fit=crop');" role="img" aria-label="Dry-aged ribeye steaks sizzling and searing on a hot grill"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Upscale American Steakhouse · Manila</p>
+      <p class="hero-eyebrow" id="cms-hero-eyebrow">Upscale American Steakhouse · Manila</p>
       <h1 id="cms-site-name">Sizzlers</h1>
       <p class="hero-sub" id="cms-hero-tagline">Modern American Classics, Served Hot</p>
       <div class="hero-ctas">
@@ -99,10 +98,10 @@
           <div class="story-badge">Est.<br>Manila</div>
         </div>
         <div class="story-text reveal reveal-delay-2">
-          <p class="section-label">The Sizzlers Story</p>
-          <h2 class="section-heading">Fire, Flavor &amp; Craft</h2>
-          <p>At Sizzlers, every plate tells a story of fire, flavor, and craft. We take classic American favorites — dry-aged steaks, handmade pasta, and gourmet burgers — and elevate them with quality ingredients, bold technique, and a touch of indulgence.</p>
-          <p>From the first sizzle on the grill to the last bite of dessert, our mission is simple: create a dining experience so memorable, you'll already be planning your next visit.</p>
+          <p class="section-label" id="cms-story-label">The Sizzlers Story</p>
+          <h2 class="section-heading" id="cms-story-heading">Fire, Flavor &amp; Craft</h2>
+          <p id="cms-story-para1">At Sizzlers, every plate tells a story of fire, flavor, and craft. We take classic American favorites — dry-aged steaks, handmade pasta, and gourmet burgers — and elevate them with quality ingredients, bold technique, and a touch of indulgence.</p>
+          <p id="cms-story-para2">From the first sizzle on the grill to the last bite of dessert, our mission is simple: create a dining experience so memorable, you'll already be planning your next visit.</p>
           <a href="#story" class="btn btn-outline-gold" style="margin-top:0.5rem;">Learn More About Us</a>
         </div>
       </div>
@@ -113,9 +112,9 @@
   <section class="section section-dark" id="menu">
     <div class="container">
       <div class="center" style="max-width:640px;">
-        <p class="section-label">Signature Dishes</p>
-        <h2 class="section-heading">Served Hot at Sizzlers</h2>
-        <p class="section-sub center">A taste of what awaits — dry-aged steaks, handmade pasta, and craft cocktails, each dish built around fire and technique.</p>
+        <p class="section-label" id="cms-menu-label">Signature Dishes</p>
+        <h2 class="section-heading" id="cms-menu-heading">Served Hot at Sizzlers</h2>
+        <p class="section-sub center" id="cms-menu-blurb">A taste of what awaits — dry-aged steaks, handmade pasta, and craft cocktails, each dish built around fire and technique.</p>
       </div>
 
       <div class="menu-grid">
@@ -124,8 +123,8 @@
             <img src="https://images.unsplash.com/photo-1682566509605-b5bb1ef7eac2?q=80&w=800&auto=format&fit=crop" alt="Sizzlers Signature Ribeye, 16oz dry-aged steak with garlic butter" loading="lazy" width="800" height="600">
           </div>
           <div class="menu-card-body">
-            <div class="menu-card-top"><h3>Sizzlers Signature Ribeye 16oz</h3><span class="menu-card-price">$58</span></div>
-            <p class="menu-card-desc">Charred, dry-aged, garlic butter</p>
+            <div class="menu-card-top"><h3 id="cms-dish1-name">Sizzlers Signature Ribeye 16oz</h3><span class="menu-card-price" id="cms-dish1-price">$58</span></div>
+            <p class="menu-card-desc" id="cms-dish1-desc">Charred, dry-aged, garlic butter</p>
           </div>
         </article>
 
@@ -134,8 +133,8 @@
             <img src="https://images.unsplash.com/photo-1755677617146-9d69ea16b199?q=80&w=800&auto=format&fit=crop" alt="Black truffle fettuccine with wild mushrooms and shaved truffle" loading="lazy" width="800" height="600">
           </div>
           <div class="menu-card-body">
-            <div class="menu-card-top"><h3>Black Truffle Fettuccine</h3><span class="menu-card-price">$24</span></div>
-            <p class="menu-card-desc">House-made pasta, wild mushrooms</p>
+            <div class="menu-card-top"><h3 id="cms-dish2-name">Black Truffle Fettuccine</h3><span class="menu-card-price" id="cms-dish2-price">$24</span></div>
+            <p class="menu-card-desc" id="cms-dish2-desc">House-made pasta, wild mushrooms</p>
           </div>
         </article>
 
@@ -144,8 +143,8 @@
             <img src="https://images.unsplash.com/photo-1572448862527-d3c904757de6?q=80&w=800&auto=format&fit=crop" alt="Smoked gouda wagyu burger on a brioche bun with caramelized onion" loading="lazy" width="800" height="600">
           </div>
           <div class="menu-card-body">
-            <div class="menu-card-top"><h3>Smoked Gouda Wagyu Burger</h3><span class="menu-card-price">$32</span></div>
-            <p class="menu-card-desc">Brioche, caramelized onion</p>
+            <div class="menu-card-top"><h3 id="cms-dish3-name">Smoked Gouda Wagyu Burger</h3><span class="menu-card-price" id="cms-dish3-price">$32</span></div>
+            <p class="menu-card-desc" id="cms-dish3-desc">Brioche, caramelized onion</p>
           </div>
         </article>
 
@@ -154,8 +153,8 @@
             <img src="https://images.unsplash.com/photo-1712334562767-5d366d0c40d9?q=80&w=800&auto=format&fit=crop" alt="Cast-iron seared salmon fillet with lemon beurre blanc and vegetables" loading="lazy" width="800" height="600">
           </div>
           <div class="menu-card-body">
-            <div class="menu-card-top"><h3>Cast-Iron Seared Salmon</h3><span class="menu-card-price">$34</span></div>
-            <p class="menu-card-desc">Lemon beurre blanc</p>
+            <div class="menu-card-top"><h3 id="cms-dish4-name">Cast-Iron Seared Salmon</h3><span class="menu-card-price" id="cms-dish4-price">$34</span></div>
+            <p class="menu-card-desc" id="cms-dish4-desc">Lemon beurre blanc</p>
           </div>
         </article>
 
@@ -164,8 +163,8 @@
             <img src="https://images.unsplash.com/photo-1707528904014-658b4c068ec5?q=80&w=800&auto=format&fit=crop" alt="Lobster mac and cheese with a five-cheese blend, plated and garnished" loading="lazy" width="800" height="600">
           </div>
           <div class="menu-card-body">
-            <div class="menu-card-top"><h3>Lobster Mac &amp; Cheese</h3><span class="menu-card-price">$28</span></div>
-            <p class="menu-card-desc">Five-cheese blend</p>
+            <div class="menu-card-top"><h3 id="cms-dish5-name">Lobster Mac &amp; Cheese</h3><span class="menu-card-price" id="cms-dish5-price">$28</span></div>
+            <p class="menu-card-desc" id="cms-dish5-desc">Five-cheese blend</p>
           </div>
         </article>
 
@@ -174,15 +173,15 @@
             <img src="https://images.unsplash.com/photo-1500217052183-bc01eee1a74e?q=80&w=800&auto=format&fit=crop" alt="Sizzlers Old Fashioned cocktail, smoked and barrel-aged, in a rocks glass" loading="lazy" width="800" height="600">
           </div>
           <div class="menu-card-body">
-            <div class="menu-card-top"><h3>Sizzlers Old Fashioned</h3><span class="menu-card-price">$16</span></div>
-            <p class="menu-card-desc">Smoked, barrel-aged</p>
+            <div class="menu-card-top"><h3 id="cms-dish6-name">Sizzlers Old Fashioned</h3><span class="menu-card-price" id="cms-dish6-price">$16</span></div>
+            <p class="menu-card-desc" id="cms-dish6-desc">Smoked, barrel-aged</p>
           </div>
         </article>
       </div>
 
       <div class="menu-cta reveal">
         <a href="menu.html" class="btn btn-gold">See Full Sizzlers Menu</a>
-        <a href="menu.pdf" class="btn btn-outline" download>Download Menu (PDF)</a>
+        <a href="menu.pdf" class="btn btn-outline" download id="cms-menu-pdf-link">Download Menu (PDF)</a>
       </div>
     </div>
   </section>
@@ -200,30 +199,31 @@
           <div class="service-icon" aria-hidden="true">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21v-7a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v7"/><path d="M9 10V5a3 3 0 0 1 6 0v5"/><path d="M2 21h20"/></svg>
           </div>
-          <h3>Private Dining at Sizzlers</h3>
-          <p>Intimate rooms for celebrations, corporate dinners, and special occasions.</p>
+          <h3 id="cms-service1-title">Private Dining at Sizzlers</h3>
+          <p id="cms-service1-desc">Intimate rooms for celebrations, corporate dinners, and special occasions.</p>
         </div>
         <div class="service-card reveal reveal-delay-2">
           <div class="service-icon" aria-hidden="true">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18l-1.5 12.5a2 2 0 0 1-2 1.5H6.5a2 2 0 0 1-2-1.5L3 7Z"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>
           </div>
-          <h3>Catering Available</h3>
-          <p>Sizzlers, delivered — full-service catering for events of every size.</p>
+          <h3 id="cms-service2-title">Catering Available</h3>
+          <p id="cms-service2-desc">Full-service catering for events of every size.</p>
         </div>
         <div class="service-card reveal reveal-delay-3">
           <div class="service-icon" aria-hidden="true">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
           </div>
-          <h3>Weekend Brunch</h3>
-          <p>A leisurely, indulgent brunch service every Sunday from 11AM.</p>
+          <h3 id="cms-service3-title">Weekend Brunch</h3>
+          <p id="cms-service3-desc">A leisurely, indulgent brunch service every Sunday from 11AM.</p>
         </div>
       </div>
 
-      <div class="gallery-slider reveal" id="gallery" aria-label="Photo gallery of the Sizzlers dining room, bar, and dishes">
+      <div class="gallery-slider reveal" id="gallery" aria-label="Photo gallery of the Avodah Kitchen dining room, bar, and dishes">
         <div class="gallery-track">
-          <img src="https://images.unsplash.com/photo-1776993298456-98c71c0e177e?q=80&w=700&auto=format&fit=crop" alt="Sizzlers elegant booth seating with warm ambient lighting" loading="lazy">
-          <img src="https://images.unsplash.com/photo-1763771757330-3212b518e31c?q=80&w=700&auto=format&fit=crop" alt="Sizzlers bartender preparing craft cocktails behind the bar" loading="lazy">
-          <img src="https://images.unsplash.com/photo-1556269923-e4ef51d69638?q=80&w=700&auto=format&fit=crop" alt="Close-up of a seared steak with rich char and sear marks" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1776993298456-98c71c0e177e?q=80&w=700&auto=format&fit=crop" alt="Placeholder — replace with a real photo of the dining room" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1763771757330-3212b518e31c?q=80&w=700&auto=format&fit=crop" alt="Placeholder — replace with a real photo of the bar area" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1556269923-e4ef51d69638?q=80&w=700&auto=format&fit=crop" alt="Placeholder — replace with a real photo of a signature dish" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1768697358705-c1b60333da35?q=80&w=700&auto=format&fit=crop" alt="Placeholder — replace with a real photo of the seating area" loading="lazy">
           <img src="https://images.unsplash.com/photo-1768697358705-c1b60333da35?q=80&w=700&auto=format&fit=crop" alt="Cozy Sizzlers dining area with elegant decor" loading="lazy">
           <img src="https://images.unsplash.com/photo-1641924676490-cd948c956b7e?q=80&w=700&auto=format&fit=crop" alt="A table set for two at Sizzlers with formal place settings" loading="lazy">
           <!-- duplicate set for seamless loop -->
@@ -248,34 +248,34 @@
       <div class="testimonial-carousel reveal">
         <div class="testimonial-slide active">
           <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
-          <p class="testimonial-quote">"Best steak I've had in Manila. The sizzle when it hit the table said it all."</p>
+          <p class="testimonial-quote" id="cms-testimonial1-quote">"Best steak I've had in Manila. The sizzle when it hit the table said it all."</p>
           <div class="testimonial-author">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" alt="Portrait of Maria L." loading="lazy">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" alt="Guest portrait" loading="lazy">
             <div>
-              <div class="testimonial-author-name">Maria L.</div>
-              <div class="testimonial-author-loc">Makati, Manila</div>
+              <div class="testimonial-author-name" id="cms-testimonial1-name">Maria L.</div>
+              <div class="testimonial-author-loc" id="cms-testimonial1-loc">Makati, Manila</div>
             </div>
           </div>
         </div>
         <div class="testimonial-slide">
           <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
-          <p class="testimonial-quote">"The truffle fettuccine is worth the trip alone — and the Old Fashioned might be the best in the city."</p>
+          <p class="testimonial-quote" id="cms-testimonial2-quote">"The truffle fettuccine is worth the trip alone — and the Old Fashioned might be the best in the city."</p>
           <div class="testimonial-author">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Portrait of Daniel R." loading="lazy">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Guest portrait" loading="lazy">
             <div>
-              <div class="testimonial-author-name">Daniel R.</div>
-              <div class="testimonial-author-loc">BGC, Taguig</div>
+              <div class="testimonial-author-name" id="cms-testimonial2-name">Daniel R.</div>
+              <div class="testimonial-author-loc" id="cms-testimonial2-loc">BGC, Taguig</div>
             </div>
           </div>
         </div>
         <div class="testimonial-slide">
           <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
-          <p class="testimonial-quote">"Warm, elegant, and the wagyu burger genuinely stopped our conversation. We booked our next visit before we even left."</p>
+          <p class="testimonial-quote" id="cms-testimonial3-quote">"Warm, elegant, and the wagyu burger genuinely stopped our conversation. We booked our next visit before we even left."</p>
           <div class="testimonial-author">
-            <img src="https://images.unsplash.com/photo-1562337404-3044c84ac061?q=80&w=200&auto=format&fit=crop" alt="Portrait of Angela T." loading="lazy">
+            <img src="https://images.unsplash.com/photo-1562337404-3044c84ac061?q=80&w=200&auto=format&fit=crop" alt="Guest portrait" loading="lazy">
             <div>
-              <div class="testimonial-author-name">Angela T.</div>
-              <div class="testimonial-author-loc">Ortigas, Pasig</div>
+              <div class="testimonial-author-name" id="cms-testimonial3-name">Angela T.</div>
+              <div class="testimonial-author-loc" id="cms-testimonial3-loc">Ortigas, Pasig</div>
             </div>
           </div>
         </div>
@@ -311,9 +311,8 @@
             <dd><a href="mailto:hello@sizzlers.ph" id="cms-email-link">hello@sizzlers.ph</a></dd>
           </dl>
           <ul class="visit-hours">
-            <li><span>Monday – Thursday</span><span>5:00 PM – 10:00 PM</span></li>
-            <li><span>Friday – Saturday</span><span>5:00 PM – 11:00 PM</span></li>
-            <li><span>Sunday</span><span>11:00 AM – 9:00 PM</span></li>
+            <li><span>Monday – Friday</span><span id="cms-hours-weekday">12:00 PM – 9:00 PM</span></li>
+            <li><span>Saturday – Sunday</span><span id="cms-hours-weekend">10:00 AM – 10:00 PM</span></li>
           </ul>
           <div class="visit-actions">
             <a href="https://www.google.com/maps?q=Legazpi+Village,+Makati,+Metro+Manila,+Philippines" class="btn btn-gold" target="_blank" rel="noopener">Get Directions</a>
@@ -324,16 +323,16 @@
 
       <div class="insta-strip reveal">
         <div class="insta-strip-head">
-          <h3 style="margin:0;font-size:1.1rem;">Follow <a href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" style="color:var(--gold);">@sizzlersofficial</a></h3>
-          <a href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" class="btn btn-outline-gold" style="padding:0.5rem 1.2rem;font-size:0.8rem;">View on Instagram</a>
+          <h3 style="margin:0;font-size:1.1rem;">Follow us on <a class="cms-instagram-link" href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" style="color:var(--gold);">Instagram</a></h3>
+          <a href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" class="cms-instagram-link btn btn-outline-gold" style="padding:0.5rem 1.2rem;font-size:0.8rem;">View on Instagram</a>
         </div>
         <div class="insta-grid">
-          <a href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="View post on Instagram"><img src="https://images.unsplash.com/photo-1546964124-0cce460f38ef?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy"></a>
-          <a href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="View post on Instagram"><img src="https://images.unsplash.com/photo-1500217052183-bc01eee1a74e?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy"></a>
-          <a href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="View post on Instagram"><img src="https://images.unsplash.com/photo-1572448862527-d3c904757de6?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy"></a>
-          <a href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="View post on Instagram"><img src="https://images.unsplash.com/photo-1755677617146-9d69ea16b199?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy"></a>
-          <a href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="View post on Instagram"><img src="https://images.unsplash.com/photo-1776993298456-98c71c0e177e?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy"></a>
-          <a href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="View post on Instagram"><img src="https://images.unsplash.com/photo-1663530761401-15eefb544889?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy"></a>
+          <a class="cms-instagram-link" href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="View post on Instagram"><img src="https://images.unsplash.com/photo-1546964124-0cce460f38ef?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy"></a>
+          <a class="cms-instagram-link" href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="View post on Instagram"><img src="https://images.unsplash.com/photo-1500217052183-bc01eee1a74e?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy"></a>
+          <a class="cms-instagram-link" href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="View post on Instagram"><img src="https://images.unsplash.com/photo-1572448862527-d3c904757de6?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy"></a>
+          <a class="cms-instagram-link" href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="View post on Instagram"><img src="https://images.unsplash.com/photo-1755677617146-9d69ea16b199?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy"></a>
+          <a class="cms-instagram-link" href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="View post on Instagram"><img src="https://images.unsplash.com/photo-1776993298456-98c71c0e177e?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy"></a>
+          <a class="cms-instagram-link" href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="View post on Instagram"><img src="https://images.unsplash.com/photo-1663530761401-15eefb544889?q=80&w=400&auto=format&fit=crop" alt="" loading="lazy"></a>
         </div>
       </div>
     </div>
@@ -358,13 +357,13 @@
         <div class="footer-logo" style="display:flex;align-items:center;gap:10px;"><img src="img/avodah-logo.jpg" alt="Avodah Kitchen logo" class="cms-site-logo" style="height:34px;width:34px;object-fit:cover;border-radius:5px;">Sizzler<span style="color:var(--sizzle-red);">s</span></div>
         <p class="footer-tagline">Modern American Classics, Served Hot.</p>
         <div class="social-icons">
-          <a href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="Sizzlers on Instagram">
+          <a class="cms-instagram-link" href="https://www.instagram.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="Sizzlers on Instagram">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
           </a>
-          <a href="https://www.facebook.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="Sizzlers on Facebook">
+          <a class="cms-facebook-link" href="https://www.facebook.com/sizzlersofficial" target="_blank" rel="noopener" aria-label="Sizzlers on Facebook">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 4h-2a4 4 0 0 0-4 4v3H7v4h2v6h4v-6h2.5l.5-4H13V8a1 1 0 0 1 1-1h2V4Z"/></svg>
           </a>
-          <a href="https://www.tiktok.com/@sizzlersofficial" target="_blank" rel="noopener" aria-label="Sizzlers on TikTok">
+          <a class="cms-tiktok-link" href="https://www.tiktok.com/@sizzlersofficial" target="_blank" rel="noopener" aria-label="Sizzlers on TikTok">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 4v9.5a3.5 3.5 0 1 1-3-3.46"/><path d="M14 4c.5 2.5 2.2 4 5 4"/></svg>
           </a>
         </div>
@@ -382,9 +381,8 @@
       <div class="footer-col">
         <h4>Hours</h4>
         <ul>
-          <li>Mon – Thu: 5PM – 10PM</li>
-          <li>Fri – Sat: 5PM – 11PM</li>
-          <li>Sun: 11AM – 9PM</li>
+          <li>Mon – Fri: <span id="cms-footer-hours-weekday">12PM – 9PM</span></li>
+          <li>Sat – Sun: <span id="cms-footer-hours-weekend">10AM – 10PM</span></li>
         </ul>
       </div>
       <div class="footer-col">
