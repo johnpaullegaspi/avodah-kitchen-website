@@ -4,14 +4,6 @@
 # This file controls what staff can edit from the /admin page,
 # and how those edits get saved back to GitHub (which then
 # triggers Netlify to rebuild the live site automatically).
-#
-# THREE PLACEHOLDERS BELOW MUST BE FILLED IN BEFORE THIS WORKS
-# — see the deployment guide for exactly where these values
-# come from (they're provided by DecapBridge when you set up
-# your site there):
-#   1. repo:         your-github-username/your-repo-name
-#   2. identity_url:  https://auth.decapbridge.com/sites/YOUR_SITE_ID
-#   3. site_url:      https://your-site-name.netlify.app
 # ===========================================================
 
 # Use DecapBridge PKCE auth (required)
@@ -27,11 +19,11 @@ backend:
 
   # See who did what (optional)
   commit_messages:
-    create: Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
-    update: Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
-    delete: Delete {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
-    uploadMedia: Upload “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
-    deleteMedia: Delete “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    create: Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
     openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
 
 # Enable PKCE fields (optional, recommended)
@@ -59,17 +51,77 @@ collections:
         label: "General Settings"
         name: "general"
         fields:
+
           - { label: "Logo Image", name: "logo", widget: "image", hint: "Upload a square image, ideally at least 200x200px." }
           - { label: "Restaurant Name (shown in the hero banner)", name: "siteName", widget: "string" }
+          - { label: "Hero Small Text (above the restaurant name)", name: "heroEyebrow", widget: "string" }
           - { label: "Hero Tagline", name: "heroTagline", widget: "string" }
-          - { label: "Tally Reservation Form URL", name: "tallyFormUrl", widget: "string", hint: "The full link to your published Tally form, e.g. https://tally.so/r/xxxxxx. Used by every 'Reserve' button across the site." }
-          - { label: "Phone Number (Display Format)", name: "phoneDisplay", widget: "string", hint: "How it's shown on the page, e.g. +63 (2) 8123 4567" }
-          - { label: "Phone Number (Link Format)", name: "phoneLink", widget: "string", hint: "For the click-to-call link. Include the plus sign and country code with no spaces, e.g. +6328123456" }
+          - { label: "Tally Reservation Form URL", name: "tallyFormUrl", widget: "string", hint: "The full link to your published Tally form. Used by every 'Reserve' button across the whole site." }
+
+          - { label: "Phone Number (Display Format)", name: "phoneDisplay", widget: "string", hint: "How it's shown on the page, e.g. +63 962 732 9006" }
+          - { label: "Phone Number (Link Format)", name: "phoneLink", widget: "string", hint: "For the click-to-call button." }
           - { label: "Email Address", name: "email", widget: "string" }
           - { label: "Restaurant Address", name: "address", widget: "text" }
 
+          - { label: "Operating Hours — Weekday (Mon-Fri)", name: "hoursWeekday", widget: "string" }
+          - { label: "Operating Hours — Weekend (Sat-Sun)", name: "hoursWeekend", widget: "string" }
+
+          - { label: "Facebook Page URL", name: "facebookUrl", widget: "string", required: false }
+          - { label: "Instagram URL", name: "instagramUrl", widget: "string", required: false }
+          - { label: "TikTok URL (leave blank to hide the TikTok icon)", name: "tiktokUrl", widget: "string", required: false }
+
+          - { label: "Menu PDF File", name: "menuPdfUrl", widget: "file", required: false, media_folder: "img/uploads", public_folder: "img/uploads", hint: "Upload your menu as a PDF. The 'Download Menu' button stays hidden on the site until a file is uploaded here." }
+
+          - { label: "Our Story — Small Label", name: "storyLabel", widget: "string" }
+          - { label: "Our Story — Heading", name: "storyHeading", widget: "string" }
+          - { label: "Our Story — Paragraph 1", name: "storyPara1", widget: "text" }
+          - { label: "Our Story — Paragraph 2", name: "storyPara2", widget: "text" }
+
+          - { label: "Menu Preview Section — Small Label", name: "menuSectionLabel", widget: "string" }
+          - { label: "Menu Preview Section — Heading", name: "menuSectionHeading", widget: "string" }
+          - { label: "Menu Preview Section — Blurb", name: "menuSectionBlurb", widget: "text" }
+
+          - { label: "Full Menu Page — Heading", name: "menuPageHeading", widget: "string" }
+          - { label: "Full Menu Page — Blurb", name: "menuPageBlurb", widget: "text" }
+
+          - { label: "Featured Dish 1 — Name", name: "dish1Name", widget: "string" }
+          - { label: "Featured Dish 1 — Price", name: "dish1Price", widget: "string" }
+          - { label: "Featured Dish 1 — Description", name: "dish1Desc", widget: "string" }
+          - { label: "Featured Dish 2 — Name", name: "dish2Name", widget: "string" }
+          - { label: "Featured Dish 2 — Price", name: "dish2Price", widget: "string" }
+          - { label: "Featured Dish 2 — Description", name: "dish2Desc", widget: "string" }
+          - { label: "Featured Dish 3 — Name", name: "dish3Name", widget: "string" }
+          - { label: "Featured Dish 3 — Price", name: "dish3Price", widget: "string" }
+          - { label: "Featured Dish 3 — Description", name: "dish3Desc", widget: "string" }
+          - { label: "Featured Dish 4 — Name", name: "dish4Name", widget: "string" }
+          - { label: "Featured Dish 4 — Price", name: "dish4Price", widget: "string" }
+          - { label: "Featured Dish 4 — Description", name: "dish4Desc", widget: "string" }
+          - { label: "Featured Dish 5 — Name", name: "dish5Name", widget: "string" }
+          - { label: "Featured Dish 5 — Price", name: "dish5Price", widget: "string" }
+          - { label: "Featured Dish 5 — Description", name: "dish5Desc", widget: "string" }
+          - { label: "Featured Dish 6 — Name", name: "dish6Name", widget: "string" }
+          - { label: "Featured Dish 6 — Price", name: "dish6Price", widget: "string" }
+          - { label: "Featured Dish 6 — Description", name: "dish6Desc", widget: "string" }
+
+          - { label: "Service Card 1 — Title (e.g. Private Dining)", name: "service1Title", widget: "string" }
+          - { label: "Service Card 1 — Description", name: "service1Desc", widget: "text" }
+          - { label: "Service Card 2 — Title (e.g. Catering)", name: "service2Title", widget: "string" }
+          - { label: "Service Card 2 — Description", name: "service2Desc", widget: "text" }
+          - { label: "Service Card 3 — Title (e.g. Weekend Brunch)", name: "service3Title", widget: "string" }
+          - { label: "Service Card 3 — Description", name: "service3Desc", widget: "text" }
+
+          - { label: "Testimonial 1 — Quote", name: "testimonial1Quote", widget: "text" }
+          - { label: "Testimonial 1 — Guest Name", name: "testimonial1Name", widget: "string" }
+          - { label: "Testimonial 1 — Guest Location", name: "testimonial1Loc", widget: "string" }
+          - { label: "Testimonial 2 — Quote", name: "testimonial2Quote", widget: "text" }
+          - { label: "Testimonial 2 — Guest Name", name: "testimonial2Name", widget: "string" }
+          - { label: "Testimonial 2 — Guest Location", name: "testimonial2Loc", widget: "string" }
+          - { label: "Testimonial 3 — Quote", name: "testimonial3Quote", widget: "text" }
+          - { label: "Testimonial 3 — Guest Name", name: "testimonial3Name", widget: "string" }
+          - { label: "Testimonial 3 — Guest Location", name: "testimonial3Loc", widget: "string" }
+
   - name: "menu"
-    label: "Menu Items"
+    label: "Full Menu (Menu Page)"
     files:
       - file: "content/menu.json"
         label: "Full Menu"
