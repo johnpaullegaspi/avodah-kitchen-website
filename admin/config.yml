@@ -120,6 +120,19 @@ collections:
           - { label: "Testimonial 3 — Guest Name", name: "testimonial3Name", widget: "string" }
           - { label: "Testimonial 3 — Guest Location", name: "testimonial3Loc", widget: "string" }
 
+          - { label: "About Page — Heading", name: "aboutHeading", widget: "string" }
+          - { label: "About Page — Intro Line", name: "aboutIntro", widget: "text" }
+          - { label: "About Page — Paragraph 1", name: "aboutPara1", widget: "text" }
+          - { label: "About Page — Paragraph 2", name: "aboutPara2", widget: "text" }
+          - { label: "About Page — Paragraph 3", name: "aboutPara3", widget: "text" }
+
+          - { label: "Value Pillar 1 — Title", name: "pillar1Title", widget: "string" }
+          - { label: "Value Pillar 1 — Description", name: "pillar1Desc", widget: "string" }
+          - { label: "Value Pillar 2 — Title", name: "pillar2Title", widget: "string" }
+          - { label: "Value Pillar 2 — Description", name: "pillar2Desc", widget: "string" }
+          - { label: "Value Pillar 3 — Title", name: "pillar3Title", widget: "string" }
+          - { label: "Value Pillar 3 — Description", name: "pillar3Desc", widget: "string" }
+
   - name: "menu"
     label: "Full Menu (Menu Page)"
     files:
