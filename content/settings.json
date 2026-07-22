@@ -1,10 +1,69 @@
 {
-  "logo": "img/uploads/chatgpt-image-jul-17-2026-02_38_42-am.png",
-  "siteName": "Avodah Kitchen",
+  "logo": "img/avodah-logo.jpg",
+  "siteName": "Sizzlers",
+  "heroEyebrow": "Upscale American Steakhouse \u00b7 Manila",
   "heroTagline": "Modern American Classics, Served Hot",
   "tallyFormUrl": "https://tally.so/r/aQgqa9",
+
   "phoneDisplay": "+63 962 732 9006",
   "phoneLink": "+63 962 732 9006",
   "email": "avodahkitchen@yahoo.com",
-  "address": "Avodah Kitchen, C3 Road Badelles Hills, Iligan City, Philippines, 9200"
+  "address": "Avodah Kitchen, C3 Road Badelles Hills, Iligan City, Philippines, 9200",
+
+  "hoursWeekday": "12:00 PM \u2013 9:00 PM",
+  "hoursWeekend": "10:00 AM \u2013 10:00 PM",
+
+  "facebookUrl": "https://www.facebook.com/avodahkitchen/",
+  "instagramUrl": "https://www.instagram.com/avodah.kitchen",
+  "tiktokUrl": "",
+
+  "menuPdfUrl": "",
+
+  "storyLabel": "The Sizzlers Story",
+  "storyHeading": "Fire, Flavor & Craft",
+  "storyPara1": "At Sizzlers, every plate tells a story of fire, flavor, and craft. We take classic American favorites \u2014 dry-aged steaks, handmade pasta, and gourmet burgers \u2014 and elevate them with quality ingredients, bold technique, and a touch of indulgence.",
+  "storyPara2": "From the first sizzle on the grill to the last bite of dessert, our mission is simple: create a dining experience so memorable, you'll already be planning your next visit.",
+
+  "menuSectionLabel": "Signature Dishes",
+  "menuSectionHeading": "Served Hot at Sizzlers",
+  "menuSectionBlurb": "A taste of what awaits \u2014 dry-aged steaks, handmade pasta, and craft cocktails, each dish built around fire and technique.",
+
+  "menuPageHeading": "Served Hot at Sizzlers",
+  "menuPageBlurb": "Dry-aged steaks, handmade pasta, and gourmet classics \u2014 crafted with fire and technique.",
+
+  "dish1Name": "Sizzlers Signature Ribeye 16oz",
+  "dish1Price": "$58",
+  "dish1Desc": "Charred, dry-aged, garlic butter",
+  "dish2Name": "Black Truffle Fettuccine",
+  "dish2Price": "$24",
+  "dish2Desc": "House-made pasta, wild mushrooms",
+  "dish3Name": "Smoked Gouda Wagyu Burger",
+  "dish3Price": "$32",
+  "dish3Desc": "Brioche, caramelized onion",
+  "dish4Name": "Cast-Iron Seared Salmon",
+  "dish4Price": "$34",
+  "dish4Desc": "Lemon beurre blanc",
+  "dish5Name": "Lobster Mac & Cheese",
+  "dish5Price": "$28",
+  "dish5Desc": "Five-cheese blend",
+  "dish6Name": "Sizzlers Old Fashioned",
+  "dish6Price": "$16",
+  "dish6Desc": "Smoked, barrel-aged",
+
+  "service1Title": "Private Dining at Sizzlers",
+  "service1Desc": "Intimate rooms for celebrations, corporate dinners, and special occasions.",
+  "service2Title": "Catering Available",
+  "service2Desc": "Full-service catering for events of every size.",
+  "service3Title": "Weekend Brunch",
+  "service3Desc": "A leisurely, indulgent brunch service every Sunday from 11AM.",
+
+  "testimonial1Quote": "Best steak I've had in Manila. The sizzle when it hit the table said it all.",
+  "testimonial1Name": "Maria L.",
+  "testimonial1Loc": "Makati, Manila",
+  "testimonial2Quote": "The truffle fettuccine is worth the trip alone \u2014 and the Old Fashioned might be the best in the city.",
+  "testimonial2Name": "Daniel R.",
+  "testimonial2Loc": "BGC, Taguig",
+  "testimonial3Quote": "Warm, elegant, and the wagyu burger genuinely stopped our conversation. We booked our next visit before we even left.",
+  "testimonial3Name": "Angela T.",
+  "testimonial3Loc": "Ortigas, Pasig"
 }
