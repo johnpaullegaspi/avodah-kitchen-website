@@ -130,6 +130,17 @@
       setText("cms-testimonial" + t + "-name", settings["testimonial" + t + "Name"]);
       setText("cms-testimonial" + t + "-loc", settings["testimonial" + t + "Loc"]);
     }
+
+    // ---- About page (about.html) ----
+    setText("cms-about-heading", settings.aboutHeading);
+    setText("cms-about-intro", settings.aboutIntro);
+    setText("cms-about-para1", settings.aboutPara1);
+    setText("cms-about-para2", settings.aboutPara2);
+    setText("cms-about-para3", settings.aboutPara3);
+    for (var p = 1; p <= 3; p++) {
+      setText("cms-pillar" + p + "-title", settings["pillar" + p + "Title"]);
+      setText("cms-pillar" + p + "-desc", settings["pillar" + p + "Desc"]);
+    }
   }
 
   function renderMenu(menuData) {
