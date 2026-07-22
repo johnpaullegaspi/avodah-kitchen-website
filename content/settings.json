@@ -65,5 +65,18 @@
   "testimonial2Loc": "BGC, Taguig",
   "testimonial3Quote": "Warm, elegant, and the wagyu burger genuinely stopped our conversation. We booked our next visit before we even left.",
   "testimonial3Name": "Angela T.",
-  "testimonial3Loc": "Ortigas, Pasig"
+  "testimonial3Loc": "Ortigas, Pasig",
+
+  "aboutHeading": "The Story Behind Sizzlers",
+  "aboutIntro": "Every plate we serve carries a little bit of who we are \u2014 here's more of our story.",
+  "aboutPara1": "At Sizzlers, every plate tells a story of fire, flavor, and craft. We take classic American favorites \u2014 dry-aged steaks, handmade pasta, and gourmet burgers \u2014 and elevate them with quality ingredients, bold technique, and a touch of indulgence.",
+  "aboutPara2": "From the first sizzle on the grill to the last bite of dessert, our mission is simple: create a dining experience so memorable, you'll already be planning your next visit.",
+  "aboutPara3": "Whether you're joining us for a quiet dinner or gathering the people who matter most for a celebration, we want every visit to feel like it was made just for you.",
+
+  "pillar1Title": "Delicious Food",
+  "pillar1Desc": "Dishes made with care, meant to be shared.",
+  "pillar2Title": "Warm Hospitality",
+  "pillar2Desc": "Every guest treated like family, every visit.",
+  "pillar3Title": "Memorable Experiences",
+  "pillar3Desc": "Moments worth celebrating, and worth returning for."
 }
