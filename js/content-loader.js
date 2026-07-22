@@ -14,45 +14,121 @@
     if (el) el.textContent = value;
   }
 
-  function setHref(id, value) {
+  function setHrefById(id, value) {
     if (!value) return;
     var el = document.getElementById(id);
     if (el) el.setAttribute("href", value);
   }
 
+  function setHrefByClass(className, value) {
+    if (!value) return;
+    document.querySelectorAll("." + className).forEach(function (el) {
+      el.setAttribute("href", value);
+    });
+  }
+
+  function hideByClass(className) {
+    document.querySelectorAll("." + className).forEach(function (el) {
+      el.style.display = "none";
+    });
+  }
+
   function applySettings(settings) {
     if (!settings) return;
 
-    // Logo — every element sharing this class gets updated (nav + footer)
+    // ---- Logo (nav + footer) ----
     if (settings.logo) {
       document.querySelectorAll(".cms-site-logo").forEach(function (img) {
         img.setAttribute("src", settings.logo);
       });
     }
 
+    // ---- Hero ----
     setText("cms-site-name", settings.siteName);
+    setText("cms-hero-eyebrow", settings.heroEyebrow);
     setText("cms-hero-tagline", settings.heroTagline);
+
+    // ---- Reserve buttons (nav, hero, banner, footer — every page) ----
     if (settings.tallyFormUrl) {
       document.querySelectorAll(".cms-tally-link, #cms-tally-link").forEach(function (link) {
         link.setAttribute("href", settings.tallyFormUrl);
       });
     }
 
+    // ---- Contact info ----
     setText("cms-address", settings.address);
-
     if (settings.phoneDisplay) {
       setText("cms-phone-link", settings.phoneDisplay);
       setText("cms-footer-phone", settings.phoneDisplay);
     }
     if (settings.phoneLink) {
-      setHref("cms-phone-link", "tel:" + settings.phoneLink);
-      setHref("cms-footer-phone", "tel:" + settings.phoneLink);
+      var telHref = "tel:" + settings.phoneLink.replace(/\s+/g, "");
+      setHrefById("cms-phone-link", telHref);
+      setHrefById("cms-footer-phone", telHref);
     }
     if (settings.email) {
       setText("cms-email-link", settings.email);
       setText("cms-footer-email", settings.email);
-      setHref("cms-email-link", "mailto:" + settings.email);
-      setHref("cms-footer-email", "mailto:" + settings.email);
+      setHrefById("cms-email-link", "mailto:" + settings.email);
+      setHrefById("cms-footer-email", "mailto:" + settings.email);
+    }
+
+    // ---- Hours ----
+    setText("cms-hours-weekday", settings.hoursWeekday);
+    setText("cms-hours-weekend", settings.hoursWeekend);
+    setText("cms-footer-hours-weekday", settings.hoursWeekday);
+    setText("cms-footer-hours-weekend", settings.hoursWeekend);
+
+    // ---- Social links ----
+    setHrefByClass("cms-facebook-link", settings.facebookUrl);
+    setHrefByClass("cms-instagram-link", settings.instagramUrl);
+    if (settings.tiktokUrl) {
+      setHrefByClass("cms-tiktok-link", settings.tiktokUrl);
+    } else {
+      hideByClass("cms-tiktok-link");
+    }
+
+    // ---- Menu PDF download buttons (hidden until a real file is uploaded) ----
+    if (settings.menuPdfUrl) {
+      setHrefById("cms-menu-pdf-link", settings.menuPdfUrl);
+    } else {
+      var pdfButtons = document.querySelectorAll("#cms-menu-pdf-link");
+      pdfButtons.forEach(function (btn) { btn.style.display = "none"; });
+    }
+
+    // ---- Our Story section ----
+    setText("cms-story-label", settings.storyLabel);
+    setText("cms-story-heading", settings.storyHeading);
+    setText("cms-story-para1", settings.storyPara1);
+    setText("cms-story-para2", settings.storyPara2);
+
+    // ---- Homepage menu preview section ----
+    setText("cms-menu-label", settings.menuSectionLabel);
+    setText("cms-menu-heading", settings.menuSectionHeading);
+    setText("cms-menu-blurb", settings.menuSectionBlurb);
+
+    // ---- Full menu page hero (menu.html) ----
+    setText("cms-menupage-heading", settings.menuPageHeading);
+    setText("cms-menupage-blurb", settings.menuPageBlurb);
+
+    // ---- Featured dishes (homepage preview cards, images stay fixed) ----
+    for (var i = 1; i <= 6; i++) {
+      setText("cms-dish" + i + "-name", settings["dish" + i + "Name"]);
+      setText("cms-dish" + i + "-price", settings["dish" + i + "Price"]);
+      setText("cms-dish" + i + "-desc", settings["dish" + i + "Desc"]);
+    }
+
+    // ---- Service / Private Dining cards ----
+    for (var s = 1; s <= 3; s++) {
+      setText("cms-service" + s + "-title", settings["service" + s + "Title"]);
+      setText("cms-service" + s + "-desc", settings["service" + s + "Desc"]);
+    }
+
+    // ---- Testimonials ----
+    for (var t = 1; t <= 3; t++) {
+      setText("cms-testimonial" + t + "-quote", '"' + settings["testimonial" + t + "Quote"] + '"');
+      setText("cms-testimonial" + t + "-name", settings["testimonial" + t + "Name"]);
+      setText("cms-testimonial" + t + "-loc", settings["testimonial" + t + "Loc"]);
     }
   }
 
@@ -60,7 +136,6 @@
     var container = document.getElementById("cms-menu-list");
     if (!container || !menuData || !Array.isArray(menuData.items)) return;
 
-    // Group items by category, preserving first-seen order
     var categories = [];
     var byCategory = {};
     menuData.items.forEach(function (item) {
